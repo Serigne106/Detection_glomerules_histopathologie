@@ -41,15 +41,6 @@ scanner et son grossissement. Un modèle utile doit **généraliser à ce qu'il 
   diamètres, confiance, export CSV.
 - **Séparation des glomérules collés** (ligne de partage des eaux, optionnelle), pour un comptage juste.
 
-## Analyse d'erreurs
-
-Chaque évaluation produit `error_gallery.jpg` (image, probabilité, incertitude, erreurs), `per_image.csv`
-et un `report.md`.
-
-![Galerie d'erreurs](docs/figures/error_gallery_pipeline_check.jpg)
-
-<!-- ⟨à remplir⟩ après l'évaluation complète : 3-4 phrases sur les causes d'échec observées
-     (ex. glomérules sclérosés, structures en bord de tuile, faux positifs sur artères ou tubules). -->
 
 ## Utilisation
 
