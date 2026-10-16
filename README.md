@@ -136,26 +136,5 @@ tests/             25 tests (données synthétiques : métriques, inférence par
 notebooks/         notebook d'origine du challenge
 ```
 
-## Vérification du pipeline sur données réelles
-
-Avant les expériences complètes, toute la chaîne a été exécutée sur un sous-ensemble de 9 images H&E :
-entraînement de 15 min sur CPU avec 5 images, évaluation par cross-fitting sur 4 images d'autres zones.
-Le Dice honnête obtenu est de **0,45 (IC 95 % 0,15–0,69)**, contre 0,57 en réglant sur le test. **Ce n'est
-pas un résultat** (trop peu de données et d'entraînement), mais une validation de bout en bout du
-code : rapport dans [docs/pipeline_check_report.md](docs/pipeline_check_report.md). L'export ONNX
-reproduit PyTorch à 1e-5 près et accélère le réseau d'un facteur 1,5 sur CPU (2 threads).
-
-## Limites
-
-- Outil de recherche, **pas un dispositif médical**.
-- Évaluation sur peu d'images et peu de lames humaines : les intervalles de confiance sont larges.
-  Une validation sur un jeu externe (HuBMAP, KPMP) serait la prochaine étape.
-- Le mode `auto` suppose que le modèle détecte déjà correctement une partie des glomérules. Sur un domaine
-  très éloigné, il peut se tromper d'échelle.
-
-## Données et licence
-
-Code sous licence MIT. Les images du challenge ne sont pas redistribuées : vérifier leurs conditions
-d'utilisation avant de publier des exemples ou des poids entraînés.
 
 Auteur : Serigne Touba MBAYE, M2 Data Science & Vision par ordinateur, Université de Bordeaux.
