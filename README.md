@@ -1,14 +1,3 @@
-# Glomeruli Finder : segmentation de glomérules rénaux, entraînée de zéro, sur CPU
-
-> Détecter, délimiter et compter automatiquement les glomérules sur des lames de rein, avec un réseau de
-> 2 M de paramètres **entraîné sans aucun pré-entraînement**, sur 42 images d'une seule lame de rongeur,
-> puis évalué sur du **rein humain pathologique jamais vu** (autre espèce, autre scanner).
-
-<!-- Remplacer par le lien du Space une fois déployé -->
-**[▶ Démo en ligne](https://huggingface.co/spaces/<compte>/glomeruli-finder)** · API REST · Docker · ONNX
-
-![Exemple de prédiction](docs/figures/prediction_example.jpg)
-
 
 ## Le problème
 
