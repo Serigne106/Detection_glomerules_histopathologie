@@ -1,0 +1,4 @@
+_base_: unet_scratch.yaml
+name: ablation_no_quality
+augment:
+  quality: false

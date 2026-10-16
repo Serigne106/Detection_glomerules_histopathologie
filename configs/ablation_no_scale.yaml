@@ -1,0 +1,4 @@
+_base_: unet_scratch.yaml
+name: ablation_no_scale
+augment:
+  zoom_range: [1.0, 1.0]

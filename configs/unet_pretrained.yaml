@@ -1,0 +1,13 @@
+# Comparaison : encodeur ResNet34 pré-entraîné ImageNet (hors contrainte du challenge).
+# pip install segmentation-models-pytorch
+_base_: unet_scratch.yaml
+name: unet_pretrained
+input:
+  normalization: imagenet
+model:
+  arch: smp_unet
+  encoder: resnet34
+  encoder_weights: imagenet
+train:
+  lr: 5.0e-4                  # fine-tuning : pas plus petit
+  epochs: 40

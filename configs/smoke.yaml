@@ -1,0 +1,13 @@
+# Test de fumée (CI / vérification rapide) : quelques minutes sur CPU.
+_base_: unet_scratch.yaml
+name: smoke
+augment:
+  samples_per_image: 2
+train:
+  epochs: 2
+  batch_size: 4
+  val_every: 1
+eval:
+  thresholds: [0.4, 0.5]
+  modes: [simple, tta8, auto]
+  n_bootstrap: 200

@@ -1,0 +1,15 @@
+# Référence : U-Net résiduel entraîné de zéro (contrainte du challenge), sur CPU.
+name: unet_scratch
+data:
+  root: ./Set02_Glom_train_clean
+  train_dirs: [train03]       # 42 images, une lame de rongeur, 3 colorations
+  eval_dir: train_AKI         # 11 images de rein humain pathologique, autre scanner
+  group_regex: 'svs_(\d+)_'   # 2 zones de lame -> 2 plis de cross-fitting
+model:
+  arch: unet_scratch
+  base_channels: 16
+  depth: 5
+train:
+  epochs: 60
+  lr: 2.0e-3
+  checkpoint: last            # aucune sélection sur le domaine de test
