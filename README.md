@@ -9,27 +9,6 @@
 
 ![Exemple de prédiction](docs/figures/prediction_example.jpg)
 
-## Résultats
-
-<!-- ⟨à remplir⟩ : lancer `make train-all evaluate compare`, puis recopier reports/comparison.md -->
-
-| Modèle | Dice (protocole honnête) | IC 95 % | F1 par glomérule | Latence CPU / image |
-|---|---|---|---|---|
-| U-Net résiduel **de zéro** (3 seeds) | ⟨à remplir⟩ | ⟨…⟩ | ⟨…⟩ | ⟨…⟩ |
-| U-Net ResNet34 pré-entraîné ImageNet | ⟨…⟩ | ⟨…⟩ | ⟨…⟩ | ⟨…⟩ |
-| *Notebook du challenge (réglé sur le jeu de test)* | *0,781* | — | — | — |
-
-Ablations (contribution de chaque famille d'augmentations) : voir `reports/comparison.md`.
-
-**Comment lire ces chiffres :**
-- **Dice honnête** : le seuil, le mode de prédiction et le post-traitement sont choisis par *cross-fitting*.
-  Chaque image de test est prédite avec des réglages choisis **sans elle**. Le 0,781 du notebook d'origine
-  était réglé et mesuré sur les mêmes 11 images, il est donc optimiste. L'écart entre les deux est rapporté
-  explicitement dans chaque `report.md`.
-- **IC 95 %** : bootstrap sur les images. Avec 11 images de validation, l'incertitude est large, et c'est
-  une information à part entière.
-- **F1 par glomérule** : un glomérule compte comme trouvé si IoU ≥ 0,5. Le Dice seul ne dit pas combien de
-  glomérules sont ratés ou fusionnés.
 
 ## Le problème
 
