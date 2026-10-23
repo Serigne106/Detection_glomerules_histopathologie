@@ -1,8 +1,0 @@
-.git
-runs
-reports
-predictions
-notebooks
-Set02_Glom_train_clean
-**/__pycache__
-*.onnx
